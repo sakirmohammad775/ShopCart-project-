@@ -1,1 +1,2 @@
 const nums=[1,2,4,5,2,1,89.20]
+console.log(numbs)
