@@ -10,8 +10,8 @@ const oddEven=(array)=>{
         else{
             oddNumber.push(element)
         }
+        return eventNumber
     }
-    return eventNumber
 }
 const result=oddEven(numbers)
 console.log(result)
