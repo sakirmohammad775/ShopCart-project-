@@ -1,10 +1,21 @@
-const doubled = [1, 2, 3].map(n => n * 2);
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((res) => res.json())
+  .then((data) => {
+    displayData(data);
+  })
+  .catch((err)=>{
+    console.log(err)
+  })
 
-console.log(doubled)
-
-const allBox=document.getElementsByClassName("box")
-for(let i=0;i<allBox.length;i++){
-    const element=allBox[i]
-    element.computedStyleMap.backgroundColor="green"
-    element.appendchild
-}
+const displayData = (userData) => {
+  const container = document.getElementById("userData-Container");
+  userData.forEach((user) => {
+    const div=document.createElement('div')
+    div.innerHTML=`
+    <h4>title</h4>
+    <p>description</p>
+    <button>Details</button>
+    `
+    container.appendChild(div)
+  });
+};
