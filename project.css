@@ -1,29 +1,113 @@
-.main-container{
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body */
+body {
+    background: #f4f6fb;
+}
+
+/* Main layout */
+.main-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Product section */
+.product-container {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Product Card */
+.card {
+    width: 220px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    cursor: pointer;
+}
+
+/* Cart Section */
+.cart-container {
+    width: 30%;
+    position: sticky;
+    top: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    height: fit-content;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Cart Title */
+.cart-container h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Cart Items */
+.cart-main-container {
+    margin-top: 15px;
+}
+
+.cart-main-container p {
+    font-size: 16px;
+    color: #444;
+}
+
+.cart-main-container h3 {
+    margin-top: 10px;
+    color: #222;
+}
+.list{
     display:flex;
-    justify-content:space-around;
+    justify-content: space-between;
+    
 }
-.cart-container{
-    width:50%;
-    box-shadow:4px 4px 4px 8px gray;
-    margin:auto;
-    text-align:center;
-    position:fixed;
-    top:0px;
-    right:
-}
-.product-container{
-    display:flex;
-    justify-content:space-around;
-    flex-wrap:wrap;
-    gap:15px;
-    width:100%;
-    margin:auto;
-    text-align:center;
-}
-.card{
-    border:1px solid gray
-    padding:10px;
-}
-.card-img{
-    width:150px;
+.list p{
+    padding-top:15px
 }

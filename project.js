@@ -18,14 +18,30 @@ const displayProduct=(products)=>{
         <p>price:${product.price}</p>
         <p>${product.description.slice(0,50)} </br>
         <button>Details</button>
-        <button onclick="handleAddToCart('${product.title},${product.price}')">Add to Cart</button>    
+        <button onclick="handleAddToCart('${product.title.slice(0,12)}','${product.price}')">Add to Cart</button>    
         `;
 
         productContainer.appendChild(div)
     })
 }
+ 
 const handleAddToCart=(name,price)=>{
+    const container=document.getElementById('cart-main-container')
     console.log(name,price)
+
+    const div=document.createElement("div")
+    div.classList.add("card-info")
+    div.innerHTML=`
+    <div class='list'>
+    <p>${name}</p>
+    <h3 class="price">${price}</h3>
+    </div>
+    `
+    container.appendChild(div)
+}
+
+const updateTotal=()=>{
+
 }
 
 loadAllProduct()
