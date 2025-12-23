@@ -7,6 +7,9 @@
     box-shadow:4px 4px 4px 8px gray;
     margin:auto;
     text-align:center;
+    position:fixed;
+    top:0px;
+    right:
 }
 .product-container{
     display:flex;
@@ -20,4 +23,7 @@
 .card{
     border:1px solid gray
     padding:10px;
+}
+.card-img{
+    width:150px;
 }
